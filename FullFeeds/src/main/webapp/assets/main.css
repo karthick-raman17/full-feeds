@@ -1,0 +1,102 @@
+body {
+    background-color: #3498db;
+}
+header, section, aside, footer {
+    margin: 0 1.5% 24px 1.5%;
+}
+
+header {
+	color: #fff;
+	display: block;
+	font-size: 30px;
+	padding: 24px 15px;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	border-radius: 5px;
+	background: #34495e;
+	background: -webkit-linear-gradient(left, rgb(36, 48, 47), #34495e);
+}
+
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: none;
+    width: 70%;
+    resize: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+}
+textarea:focus,.feed-update-btn{
+    outline: 0;
+}
+
+.feed-container{
+    position: relative;
+    font-family: sans-serif;
+    bottom: 400px;
+   
+}
+.feed-update-btn{
+    background-color: #34495e;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    display:inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 27px;
+    right: 139px;
+}
+
+.feed-update-btn:hover {
+    background-color: #313b46;
+    color: white;
+}
+
+.show-feed-container{
+    background-color: white;
+    border-radius: 3px;
+    overflow-y: auto;
+    height: 600px;
+    width: 684px;
+}
+
+
+.feed-card{
+    font-family: sans-serif;
+    background-color: #313b46;
+    border-radius: 3px;
+    display: block;
+    color: white;
+    padding: 25px 20px;
+    margin: 10px 15px;
+    font-size: 14px;
+}
+.feed-date{
+    float: right;
+    margin: 0px;
+}
+section{
+    display: inline-block;
+    width: 46%;
+}
+
+.feed-edit,.feed-delete{
+    float: right;
+}
+.feed-edited{
+	margin: 0px;
+    color: grey;
+    position: relative;
+    top: 12px;
+}
