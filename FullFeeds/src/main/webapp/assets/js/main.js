@@ -1,10 +1,10 @@
 $(document).ready(function() {
-  $("#feed_box").keydown(function(event) {
-    if (event.which == 13) {
-      this.form.submit();
-      event.preventDefault();
-    }
-  });
+  //$("#feed_box").keydown(function(event) {
+    //if (event.which == 13) {
+      //this.form.submit();
+      //event.preventDefault();
+    //}
+  //});
   $("#feed_form").submit(function(e) {
     e.preventDefault();
 
@@ -22,9 +22,9 @@ $(document).ready(function() {
           $(".show-feed-container").append(
             '<div class="feed-card" id=' +
               data.id +
-              '><div class="feed-action"><button class="feed-delete">Delete</button></div><p contenteditable="true" class="feed-title">' +
+              '><div class="feed-action"><button class="feed-delete"></button></div><pre contenteditable="true" class="feed-title">' +
               data.feed +
-              '</p><p class="feed-date">' +
+              '</pre><p class="feed-date">' +
               moment(data.createdDate).format("MMMM Do YYYY, h:mm") +
               "</p></div>"
           );
@@ -108,9 +108,7 @@ $(document).ready(function() {
 });
 
 $(window).on("load", function() {
-  $.post("/readfeeds", {
-    email: "karthick.raman@anywhere.co"
-  }).done(function(data) {
+  $.get("/readfeeds").done(function(data) {
     var feedObject = JSON.parse(data);
     console.log(feedObject);
     
@@ -122,9 +120,9 @@ $(window).on("load", function() {
         $(".show-feed-container").append(
           '<div class="feed-card" id=' +
             feedObject[i].id +
-            '><div class="feed-action"><button class="feed-delete">Delete</button></div><p contenteditable="true" class="feed-title">' +
+            '><div class="feed-action"><button class="feed-delete"></button></div><pre contenteditable="true" class="feed-title">' +
             feedObject[i].feed +
-            '</p><p class="feed-edited">Edited</p><p class="feed-date">' +
+            '</pre><p class="feed-edited">Edited</p><p class="feed-date">' +
             createdTime.format("MMMM Do YYYY, h:mm") +
             "</p></div>"
         );
@@ -132,9 +130,9 @@ $(window).on("load", function() {
         $(".show-feed-container").append(
           '<div class="feed-card" id=' +
             feedObject[i].id +
-            '><div class="feed-action"><button class="feed-delete">Delete</button></div><p contenteditable="true" class="feed-title">' +
+            '><div class="feed-action"><button class="feed-delete"></button></div><pre contenteditable="true" class="feed-title">' +
             feedObject[i].feed +
-            '</p><p class="feed-date">' +
+            '</pre><p class="feed-date">' +
             createdTime.format("MMMM Do YYYY, h:mm") +
             "</p></div>"
         );

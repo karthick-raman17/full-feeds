@@ -12,8 +12,8 @@ import com.full.feeds.daointerface.FeedDAOInterface;
 
 @WebServlet(name = "ReadFeed", urlPatterns = "/readfeeds")
 public class ReadFeed extends HttpServlet{
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		String userEmail = request.getParameter("email");
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String userEmail = "karthick.raman@anywhere.co";
 		FeedDAOInterface feedObj = new FeedDAO();
 		response.getWriter().print(feedObj.readAllFeeds(userEmail).toString());
 	}
