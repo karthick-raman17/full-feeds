@@ -1,11 +1,13 @@
 package com.full.feeds.daointerface;
 
-import com.full.feeds.model.Feed;
 
 public interface FeedDAOInterface {
-	boolean createFeed(Feed feed);
-	String readAllFeeds(String userEmail);
-	String updateFeed(Feed feed);
+	String createFeed(String userId,String feedData);
+	String readUserFeeds(String userEmail);
+	String readAllFeeds(String cursor);
+	String updateFeed(String feedData);
 	boolean deleteFeed(String userEmail);
 	String generateFeedId();
+	String likeFeed(String data);
+	String commentFeed(String feedData);
 }

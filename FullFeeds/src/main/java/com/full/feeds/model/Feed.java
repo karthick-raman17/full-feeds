@@ -3,7 +3,6 @@ package com.full.feeds.model;
 import java.util.Date;
 
 public class Feed {
-	
 	private String id;
 	private String feedValue;
 	private String createdTime;

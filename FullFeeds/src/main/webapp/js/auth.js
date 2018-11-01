@@ -5,6 +5,8 @@ const protocol = window.location.protocol;
 
 
 $(document).ready(()=>{
+console.log(getCookie("user_presence"));
+console.log(getCookie("user_jwt"));
     if(!getCookie("user_presence") && !getCookie("user_jwt")){
         console.log("user not logged in");
         $("#login-signup").trigger("click");
@@ -20,7 +22,7 @@ function getCookie(name) {
 function authoriseWithGoogle(){
 
             const client_id = "1038305202126-nurp4kb4jdlsp27ep81u77bqpt7astg1.apps.googleusercontent.com";
-        const redirect_uri = protocol+"//"+host+"/googleauthcallback";
+        const redirect_uri = protocol+"//"+host+"/auth/googleauthcallback";
         const scope = "profile email openid";
       
         let state;

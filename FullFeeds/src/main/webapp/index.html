@@ -4,103 +4,25 @@
     <meta charset="UTF-8">
     <title>Login Page</title>
     <!--<link rel="stylesheet" href="IssuedetailedStyles.css">-->
-    <link rel="stylesheet" href="assets/css/landingpage.css">
+    <link rel="stylesheet" href="/css/landingpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-<div id = "loading-icon" hidden>
-    <img src="assets/image/reload.gif">
+<!-- <div id = "loading-icon" hidden>
+    <img src="/image/reload.gif">
 </div>
-
+ -->
 <div id="header">
     <div id = "login-signup" class="default-text">
         Log in/Sign up
     </div>
 </div>
-<div id = "body-after-header">
 
-    <!--sidebar elements -->
-    <div id = "sidebar">
-        <button id = "create-post" class="create-post-btn" onclick="issue.showBox('create-issue-popup')">CREATE POST</button>
-        <button id="search-post" class="create-post-btn">SEARCH POST</button>
-
-    </div>
-
-    <!--Signup form-->
-    <div id = "signup-form">
-        <h2 class="title">Sign up</h2>
-        <form id = "create-issue-popup-form" autocomplete="off" action="#">
-
-            <!-- name -->
-            <div class = "signup-field">
-                <div class="textInput">
-                    <div class="inset">
-                        Name
-                    </div>
-                    <div class="inputContainer">
-                        <input id="name" type="text" placeholder="required" value="type in your name here" autocomplete="off">
-                    </div>
-                </div>
-            </div>
-            <!-- email -->
-            <div class="signup-field">
-                <div class="textInput">
-                    <div class="inset">
-                        Email
-                    </div>
-                    <div class="inputContainer">
-                        <input id="email"  type="text" placeholder="required" value="Your email id here">
-                    </div>
-                </div>
-            </div>
-            <!-- Team -->
-            <div class="signup-field">
-                <div class="textInput">
-                    <div class="inset">
-                        Team
-                    </div>
-                    <div class="inputContainer">
-                        <input id="team" type="text" placeholder="optional" value="team's name">
-                    </div>
-                </div>
-            </div>
-
-            <div class="create-issue-popup-done">
-                <button id ="submit-signup-form" class="create-post-btn">Signup</button>
-            </div>
-        </form>
-    </div>
-
-</div>
-
-<!--alert box plugins-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 
-<!--<script src="js/issuescript.js"></script>-->
-<script src="assets/js/home.js"></script>
-<script src="assets/js/auth.js"></script>
-
-
-<!-- refactor later -->
-<script type="text/javascript">
-    function validateForm() {
-        if (isEmpty(document.getElementById('data_6').value.trim())) {
-            alert('Name is required!');
-            return false;
-        }
-        if (isEmpty(document.getElementById('data_4').value.trim())) {
-            alert('Email is required!');
-            return false;
-        }
-        return true;
-    }
-    function isEmpty(str) { return (str.length === 0 || !str.trim()); }
-    function validateEmail(email) {
-        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-        return isEmpty(email) || re.test(email);
-    }
-</script>
+<script src="/js/home.js"></script>
+<script src="/js/auth.js"></script>
 
 </body>
 </html>
